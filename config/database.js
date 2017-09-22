@@ -37,7 +37,7 @@
           db[modelName].associate(db);
         }
       });
-    // sequelize.sync({force: true});
+    sequelize.sync();
 
     db.sequelize = sequelize;
     db.Sequelize = Sequelize;
