@@ -13,9 +13,11 @@ var session = require('express-session');
 var SequelizeStore = require('connect-session-sequelize')(session.Store);
 var modules = {};
 
+var port = process.env.PORT || 8000
 
-
-
+app.listen(port, function() {
+    console.log("App is running on port " + port);
+});
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
@@ -49,7 +51,7 @@ app.use(flash());
 app.use('/', index);
 app.use('/admin', admin);
 
-app.listen(3000);
+// app.listen(3000);
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
     var err = new Error('Not Found');
