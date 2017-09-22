@@ -13,13 +13,13 @@
 
     if (config.use_env_variable) {
         // var sequelize = new Sequelize(process.env[config.use_env_variable]);
-        const sequelize = new Sequelize('mysql://b9d0c3d3c08bfd:e6ab8e95@us-cdbr-iron-east-05.cleardb.net/heroku_20376b4b6bbb06e?reconnect=true');
+        var sequelize = new Sequelize('mysql://b9d0c3d3c08bfd:e6ab8e95@us-cdbr-iron-east-05.cleardb.net/heroku_20376b4b6bbb06e?reconnect=true');
     } else {
       // var sequelize = new Sequelize( config.database, config.username, config.password,  {
       //     host: config.host,
       //     dialect: config.dialect
       //   });
-        const sequelize = new Sequelize('mysql://b9d0c3d3c08bfd:e6ab8e95@us-cdbr-iron-east-05.cleardb.net/heroku_20376b4b6bbb06e?reconnect=true');
+        var sequelize = new Sequelize('mysql://b9d0c3d3c08bfd:e6ab8e95@us-cdbr-iron-east-05.cleardb.net/heroku_20376b4b6bbb06e?reconnect=true');
     }
 
     // adding the models to the db variable
