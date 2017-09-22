@@ -1,0 +1,116 @@
+/* Custom Stylesheet */
+/**
+ * Use this file to override Materialize files so you can update
+ * the core Materialize files in the future
+ *
+ * Made By MaterializeCSS.com
+ */
+
+.icon-block {
+  padding: 0 15px;
+}
+.icon-block .material-icons {
+	font-size: inherit;
+}
+
+.fullwidth {
+width:100%;
+margin-left:0;
+margin-right:0;
+padding-left:0;
+padding-right:0;
+display:block;
+text-align:center; /*This will result in centering the link text, which is probably what you want -brianjohnsondesign.com*/
+}
+
+#display-fatwa > .collection-item {
+    font-family: sans-serif;
+    font-size: 20px;  
+    background-color: #e0f7fa ;
+}
+
+#display-fatwa :nth-child(even){
+  color: darkblue!important;
+}
+#display-fatwa :nth-child(odd){
+  color: black !important;
+}
+
+#display-fatwa{
+    border-width: 2px;
+    border-color: #00695c ;
+    border-top-width: 0px
+}
+
+.card i {
+    position:relative;
+    top: 7px;
+}
+
+.card-content{
+    padding: 0 !important;
+}
+
+.card-title{
+    padding-right: 23px;
+}
+
+#display-fatwa a:hover {
+    background-color: #00695c  !important;
+    color: white !important;
+}
+
+.last-row {
+    padding-bottom: 33px !important;
+}
+
+.btn-large{
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.btn{
+    font-size: 20px;
+}
+
+.prefix{
+    right: -15%;
+}
+
+.fatwa-single-header{
+    background-color: #00acc1 !important;
+    margin-left: -8px !important;
+    margin-right: -8px !important;
+}
+
+.fatwa-single-border{
+    border-width: 1px;
+    border-color: darkgreen;
+}
+
+.fatwa-single-question {
+color: #e91e63;
+font-size: 18px;
+}
+
+.fatwa-single-date{
+    font-size: 12px;
+    color: gray;
+}
+
+.fatwa-single-answer{
+color: darkblue;
+font-size: 18px;
+
+}
+
+.fatwa-single-title{
+margin: 0;
+}
+.fatwa-single-title > a,
+h4.fatwa-single-title
+{
+    color: black;
+    font-size: 24px;
+}
+

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <%- include('partials/head'); %>
+</head>
+<body>
+<%- include('partials/header'); %>
+<div class="section">
+    <div class="row">
+        <br>
+        <br>
+        <div class="col l6 m12 s12 push-l1">
+            <div class="card  cyan darken-1">
+                <div class="card-content">
+                    <div class="card-title">
+                        <i class="material-icons">bookmark</i>
+                        <span><%= elements.categoryName %></span>
+                    </div>
+                </div>
+                <div id="display-fatwa" class="collection">
+                    <% fatwas.forEach(function (fatwa) {%>
+                        <a href="/fatwa_answer/<%= fatwa.fatwaId %>" class="collection-item">
+                            <i class="material-icons md-18">create</i>
+                            <%= fatwa.title %>
+                        </a>
+                    <% })%>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <ul class="pagination push-l3 push-m4 push-s2 col l6 m12 s12">
+            <% for(var i = 1; i <= elements.pages; i++) {%>
+                <%if (elements.page == 1 && i == 1) {%>
+                    <li class="disabled"><a href="#"><i class="material-icons">chevron_right</i></a></li>
+                <%}if (elements.page != 1 && i == 1) { %>
+                    <li class="waves-effect"><a href="?page=<%= parseInt(elements.page) - 1 %>"><i class="material-icons">chevron_right</i></a></li>
+                <%}if (i == elements.page) {%>
+                    <li class="active"><a href="?page=<%= i %>"> <%= i %> </a></li>
+                <%}if (i != elements.page) {%>
+                    <li class="waves-effect"><a href="?page=<%= i %>"> <%= i %> </a></li>
+                <%}if (elements.page == elements.pages && i == elements.pages ) {%>
+                    <li class="disabled"><a href="#!"><i class="material-icons">chevron_left</i></a></li>
+                <%}if (elements.page != elements.pages && i == elements.pages) {%>
+                    <li class="waves-effect"><a href="?page=<%= parseInt(elements.page) + 1 %>"><i class="material-icons">chevron_left</i></a></li>
+                <%}}%>
+        </ul>
+    </div>
+</div>
+<%- include('partials/footer'); %>
+</body>
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <%- include('partials/head'); %>
+</head>
+<body>
+<%- include('partials/header'); %>
+
+<div class="row">
+    <br>
+    <br>
+    <div class="container pull-l3">
+        <%if (success) {%>
+            <div class="row" id="card-alert" >
+                <div class="push-l4 push-m4 col l6 m6 s12 card-panel green lighten-4 green-text text-darken-4">
+                    <span style="position: relative;top: 7px;"><%= success %></span>
+                    <button class="waves-effect waves-light btn-flat close left"><i class="material-icons">close</i></button>
+                </div>
+            </div>
+        <%}%>
+        <%if (failed) {%>
+        <div class="row" id="card-alert" >
+            <div class="push-l4 push-m4 col l6 m6 s12 card-panel red lighten-4 red-text text-darken-4">
+                <span style="position: relative;top: 7px;"><%= failed %></span>
+                <button class="btn-flat waves-effect waves-red close left"><i class="material-icons">close</i></button>
+            </div>
+        </div>
+        <%}%>
+        <div class="row">
+            <br>
+            <br>
+            <form id="formValidate" action="/ask_question" method="POST" class="push-l4 push-m4 col l6 m6 s12">
+                <div class="row">
+                    <div class="input-field col l12 m12 s12">
+                        <i class="material-icons prefix">account_circle</i>
+                        <input name="name" type="text" required>
+                        <label for="name">الاسم</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col col l12 m12 s12">
+                        <i class="material-icons prefix">phone</i>
+                        <input name="mobile_number" type="tel">
+                        <label for="mobile_number">رقم الجوال</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col l12 m12 s12">
+                        <i class="material-icons prefix">email</i>
+                        <input required name="email" type="email">
+                        <label for="email" data-error="تأكد من البريد"  > البريد الالكتروني</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col l12 m12 s12">
+                        <i class="material-icons prefix">subject</i>
+                        <input required name="title" type="text" >
+                        <label for="title">عنوان السؤال</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col l12 m12 s12">
+                        <i class="material-icons prefix">create</i>
+                        <textarea name="question" class="materialize-textarea" data-length="1000" required></textarea>
+                        <label for="question">السؤال</label>
+                    </div>
+                </div>
+                <div class="row" align="center">
+                    <button type="submit" class="waves-effect waves-light btn orange send-question">أرسل السؤال</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<%- include('partials/footer'); %>
+<script>
+    $(function () {
+        $("div > button.close").on("click", function () {
+            $("div > button.close").attr('disabled', 'disabled');
+            $("#card-alert").addClass("animated fadeOut");
+        });
+    });
+
+</script>
+</body>
+</html>

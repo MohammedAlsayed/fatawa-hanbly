@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <%- include('partials/head'); %>
+</head>
+<body>
+    <%- include('partials/header'); %>
+    <div class="section">
+        <!--   Icon Section   -->
+        <div class="row">
+            <br>
+            <br>
+            <div class="col l6 m6 s12 push-l1">
+                <div class="card  cyan darken-1">
+                    <div class="card-content">
+                        <div class="card-title">
+                            <i class="material-icons">bookmark</i>
+                            <span>جديد الفتاوى</span>
+                        </div>
+                    </div>
+                    <div id="display-fatwa" class="collection">
+                        <% fatwas.forEach(function (fatwa) {%>
+                        <a href="/fatwa_answer/<%= fatwa.fatwaId %>" class="collection-item">
+                            <i class="material-icons md-18">create</i>
+                            <%=fatwa.title%>
+                        </a>
+                        <% })%>
+                        <a href="#!" class="collection-item left teal darken-1" style="color: white !important;">المزيد</a>
+                        <div class="collection-item last-row cyan lighten-5"></div>
+                    </div>
+                </div>
+                <br>
+                <br>
+                <div class="card  cyan darken-1">
+                    <div class="card-content">
+                        <div class="card-title">
+                            <i class="material-icons">star</i>
+                            <span>فتاوى مختارة</span>
+                        </div>
+                    </div>
+                    <div id="display-fatwa" class="collection">
+                        <a href="#!dd" class="collection-item">
+                            <i class="material-icons md-18">create</i> فتاوى واحد
+                        </a>
+                        <a href="#!" class="collection-item">
+                            <i class="material-icons md-18">create</i> فتاوى واحد
+                        </a>
+                        <a href="#!" class="collection-item">
+                            <i class="material-icons md-18">create</i> فتاوى واحد
+                        </a>
+                        <a href="#!" class="collection-item">
+                            <i class="material-icons md-18">create</i> فتاوى واحد
+                        </a>
+                        <a href="#!" class="collection-item">
+                            <i class="material-icons md-18">create</i> فتاوى واحد
+                        </a>
+
+                        <a href="#!" class="collection-item left teal darken-1" style="color: white !important;">المزيد</a>
+                        <div class="collection-item last-row cyan lighten-5"></div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="col l3 m6 s12 push-l2">
+                <a class="waves-effect waves-light btn-large orange fullwidth" href="/ask_question">ارسل سؤالا</a>
+                <br>
+                <div class="card cyan darken-1">
+                    <div class="card-content">
+                        <div class="card-title">
+                            <i class="material-icons">create_new_folder</i>
+                            <span>التصنيف الموضوعي</span>
+                        </div>
+                    </div>
+                    <div id="display-fatwa" class="collection">
+                        <% categories.forEach(function (category) { %>
+                        <a href="/category/<%=category.categoryId%>" class="collection-item">
+                            <span><i class="material-icons md-18">remove</i></span>
+                            <%= category.name %>
+                        </a>
+                        <%})%>
+                        <a href="#!" class="collection-item left teal darken-1" style="color: white !important;">المزيد</a>
+                        <div class="collection-item last-row cyan lighten-5"></div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+
+
+        <div class="row">
+            <div class="col l6 m6 s12 push-l1">
+            </div>
+        </div>
+
+    </div>
+    <br>
+    <br>
+    <%- include('partials/footer'); %>
+  </body>
+</html>

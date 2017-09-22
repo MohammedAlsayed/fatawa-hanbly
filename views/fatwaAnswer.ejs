@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <%- include('partials/head'); %>
+</head>
+<body>
+<%- include('partials/header'); %>
+<br>
+<br>
+<div class="section">
+    <div class="row">
+        <ul class="collection fatwa-single-border col l6 m6 s12 push-l1">
+            <li class="fatwa-single-header collection-item">
+                <h4 class="fatwa-single-title">
+                    <a href="/"><i class="material-icons md-18">home</i></a>
+                    - <a href="/category/<%= category.categoryId %>"> <%= category.name %> </a>.
+                </h4>
+            </li>
+            <li class="collection-item fatwa-single-question"><%= fatwa.title %></li>
+            <li class="collection-item fatwa-single-question"><%= fatwa.question %> </li>
+            <li class="collection-item left-align fatwa-single-date">تم النشر في <%= fatwa.date %> </li>
+            <li class="collection-item fatwa-single-answer"><%= fatwa.answer %> </li>
+        </ul>
+
+
+    </div>
+
+</div>
+
+
+
+
+<%- include('partials/footer'); %>
+</body>
+</html>
