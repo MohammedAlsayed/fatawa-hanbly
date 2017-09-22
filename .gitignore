@@ -2,6 +2,5 @@
 .gitignore
 node_modules/are-we-there-yet/CHANGES.md~
 node_modules/console-control-strings/README.md~
-public/images/
 # Dependency directories
 /node_modules/
