@@ -3,21 +3,21 @@
     "username": "root",
     "password": "root",
     "database": "ignite",
-    "host": "127.0.0.1",
+    "host": "//b9d0c3d3c08bfd:e6ab8e95@us-cdbr-iron-east-05.cleardb.net/heroku_20376b4b6bbb06e?reconnect=true",
     "dialect": "mysql"
   },
   "test": {
     "username": "root",
     "password": "root",
     "database": "ignite",
-    "host": "127.0.0.1",
+    "host": "//b9d0c3d3c08bfd:e6ab8e95@us-cdbr-iron-east-05.cleardb.net/heroku_20376b4b6bbb06e?reconnect=true",
     "dialect": "mysql"
   },
   "production": {
     "username": "root",
     "password": "root",
     "database": "ignite",
-    "host": "127.0.0.1",
+    "host": "//b9d0c3d3c08bfd:e6ab8e95@us-cdbr-iron-east-05.cleardb.net/heroku_20376b4b6bbb06e?reconnect=true",
     "dialect": "mysql"
   }
 }
